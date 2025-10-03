@@ -1,0 +1,62 @@
+#root {
+    width: 100%;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    li:has(img) {
+            list-style-type:none;
+        }
+        .section-1 {
+            li {
+                color: #FF4E42;
+            }
+        }
+        .section-2 {
+            li {
+                color: #FFA400;
+            }
+        }
+        .section-3 {
+            li {
+                color: #0CCE6B;
+            }
+        }
+    .Intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 1166px;
+    }
+    .Sommaire {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 1166px;
+    }
+    .Partie0 {
+        width: 1166px;
+        ul {
+            list-style-type:none;
+        }
+    }
+    .Partie1 {
+        width: 1166px;
+    }
+    .Partie2 {
+        display: flex;
+        flex-direction: column;
+        width: 1166px;
+    }
+    .Partie3 {
+        width: 1166px;
+    }
+    .Partie4 {
+        width: 1166px;
+    }
+    .Partie5 {
+        width: 1166px;
+    }
+}
