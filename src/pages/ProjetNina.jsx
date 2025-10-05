@@ -1,6 +1,8 @@
 import React from 'react'
 import { Projets } from '../data/Projets'
 import '../styles/Ninapage.scss'
+import WaveScreen from '../assets/images/Nina/WaveScreen.png'
+import SchemaScreen from '../assets/images/Nina/SchemaScreen.png'
 
 export default function ProjetNina() {
   const projet = Projets[0]
@@ -55,9 +57,35 @@ export default function ProjetNina() {
       </ul>
     )}
   </article>
+  
 ))}
-      <article>
-        <h2></h2>
+      <article className="Annexe">
+        <h2>Annexe</h2>
+        <h3>Rapport LightHouse</h3>
+        <iframe
+          src="/PortfolioReact/AuditLightHouse.html"
+          title="Rapport Lighthouse"
+          style={{
+            width: "100%",
+            height: "90vh",
+            border: "none",
+            borderRadius: "10px",
+            boxShadow: "0 0 10px rgba(0,0,0,0.1)",
+          }}
+        ></iframe>
+        <h3>Rapport Wave</h3>
+          <img
+          src={WaveScreen}
+          alt="Capture du rapport Wave"
+          style={{
+            width: "380px",
+          }}
+          />
+        <h3>Rapport Schema</h3>
+          <img
+          src={SchemaScreen}
+          alt="Schéma du projet Nina"
+          />
       </article>
     </main>
   )

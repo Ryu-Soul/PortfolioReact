@@ -32,8 +32,19 @@ body {
 }
 
 h1 {
+  font-family: 'Montserrat';
   font-size: 3.2em;
   line-height: 1.1;
+}
+h2 {
+  font-size: 2.8em;
+}
+h3 {
+  font-size: 2em;
+}
+
+h2, h3 {
+  font-family: 'Montserrat';
 }
 
 #app {
@@ -94,4 +105,10 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.navbar {
+    display: flex;
+    gap: 50px;
+    width: 100%;
 }

@@ -20,7 +20,7 @@ export const Projets = [
   {
     h1Title: "Projet NinaCarducci",
     introTitle: "Introduction",
-    introP: "Je suis développeur freelance et je propose mes services d’optimisation SEO à de nouveaux clients.Parmi mes prospects, j’ai identifié le site de Nina Carducci, une photographe dont m’a parlé un ami.Suite à nos échanges, Nina Carducci a accepté de collaborer avec moi. Ma mission a consisté à optimiser globalement son site, tant sur les performances que sur le SEO, à mettre en place le référencement local via Schema.org, à ajouter les balises meta pour les réseaux sociaux, à améliorer l’accessibilité et enfin à produire un rapport détaillé présentant mes actions et leurs impacts.",
+    introP: "Je suis développeur freelance et je propose mes services d’optimisation SEO à de nouveaux clients. Parmi mes prospects, j’ai identifié le site de Nina Carducci, une photographe dont m’a parlé un ami. Suite à nos échanges, Nina Carducci a accepté de collaborer avec moi. Ma mission a consisté à optimiser globalement son site, tant sur les performances que sur le SEO, à mettre en place le référencement local via Schema.org, à ajouter les balises meta pour les réseaux sociaux, à améliorer l’accessibilité et enfin à produire un rapport détaillé présentant mes actions et leurs impacts.",
     Sommaire: "Sommaire",
     Parties: [
       {
@@ -158,19 +158,6 @@ export const Projets = [
           }
         ]
       },
-      {
-        title: "Annexe",
-        sections: [
-          {
-            subtitle: "Rapports",
-            content: [
-              "Rapport complet de l’audit Lighthouse",
-              "Rapport Wave",
-              "Rapport Schema"
-            ]
-          }
-        ]
-      }
     ]
   }
 ];

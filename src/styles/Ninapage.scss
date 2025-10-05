@@ -6,6 +6,21 @@ main {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    article {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    img {
+        width: 100%;
+        height: auto;
+        min-height: 40px;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
     li:has(img) {
             list-style-type:none;
         }
@@ -44,19 +59,44 @@ main {
     }
     .Partie1 {
         width: 1166px;
+        section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
     }
     .Partie2 {
         display: flex;
         flex-direction: column;
         width: 1166px;
+        section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
     }
     .Partie3 {
         width: 1166px;
+        section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
     }
     .Partie4 {
         width: 1166px;
+        section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
     }
-    .Partie5 {
+    .Annexe {
         width: 1166px;
+        section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
     }
 }
