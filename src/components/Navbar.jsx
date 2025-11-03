@@ -10,6 +10,9 @@ function Navbar() {
       <NavLink to="/ProjetNina" end className={({ isActive }) => isActive ? 'active-link' : ''}>
         Projet Nina
       </NavLink>
+      <NavLink to="/724Events" end className={({ isActive }) => isActive ? 'active-link' : ''}>
+        724Events
+      </NavLink>
     </nav>
   )
 }

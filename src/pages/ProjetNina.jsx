@@ -23,42 +23,42 @@ export default function ProjetNina() {
         </ol>
       </article>
       {projet.Parties.map((partie, index) => (
-  <article key={index} className={'Partie' + index }>
-    <h2>{index + 1} – {partie.title}</h2>
+        <article key={index} className={'Partie' + index}>
+          <h2>{index + 1} – {partie.title}</h2>
 
-    {/* Cas où la partie contient des sections */}
-    {partie.sections && partie.sections.map((section, idx) => (
-      <section key={idx} className={`section-${idx + 1}`}>
-        {section.subtitle && <h3>{section.subtitle}</h3>}
-        <ul>
-          {section.content.map((point, i) => (
-            <li key={i}>
-              {typeof point === "string" ? (
-                point
-              ) : (
-                <img
-                  src={point}
-                  alt={`illustration-${i}`}
-                  style={{ maxWidth: "600px", display: "block", margin: "10px auto" }}
-                />
-              )}
-            </li>
+          {/* Cas où la partie contient des sections */}
+          {partie.sections && partie.sections.map((section, idx) => (
+            <section key={idx} className={`section-${idx + 1}`}>
+              {section.subtitle && <h3>{section.subtitle}</h3>}
+              <ul>
+                {section.content.map((point, i) => (
+                  <li key={i}>
+                    {typeof point === "string" ? (
+                      point
+                    ) : (
+                      <img
+                        src={point}
+                        alt={`illustration-${i}`}
+                        style={{ maxWidth: "600px", display: "block", margin: "10px auto" }}
+                      />
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </section>
           ))}
-        </ul>
-      </section>
-    ))}
 
-    {/* Cas où la partie contient directement du contenu */}
-    {partie.content && (
-      <ul>
-        {partie.content.map((point, i) => (
-          <li key={i}>{point}</li>
-        ))}
-      </ul>
-    )}
-  </article>
-  
-))}
+          {/* Cas où la partie contient directement du contenu */}
+          {partie.content && (
+            <ul>
+              {partie.content.map((point, i) => (
+                <li key={i}>{point}</li>
+              ))}
+            </ul>
+          )}
+        </article>
+
+      ))}
       <article className="Annexe">
         <h2>Annexe</h2>
         <h3>Rapport LightHouse</h3>
@@ -74,18 +74,18 @@ export default function ProjetNina() {
           }}
         ></iframe>
         <h3>Rapport Wave</h3>
-          <img
+        <img
           src={WaveScreen}
           alt="Capture du rapport Wave"
           style={{
             width: "380px",
           }}
-          />
+        />
         <h3>Rapport Schema</h3>
-          <img
+        <img
           src={SchemaScreen}
           alt="Schéma du projet Nina"
-          />
+        />
       </article>
     </main>
   )
