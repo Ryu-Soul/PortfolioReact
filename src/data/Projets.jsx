@@ -28,8 +28,15 @@ import WrongCode from "../assets/images/724Events/WrongCode.png";
 import OnSuccessNotCalled from "../assets/images/724Events/OnSuccessNotCalled.png";
 import LastFromDataContext from "../assets/images/724Events/LastFromDataContext.png";
 import NoLastGiven from "../assets/images/724Events/NoLastGiven.png";
-
-
+import GoodMath from "../assets/images/724Events/GoodMath.png";
+import BetterDate from "../assets/images/724Events/BetterDate.png";
+import OnChangeValueAdded from "../assets/images/724Events/OnChangeValueAdded.png";
+import BetterCode from "../assets/images/724Events/BetterCode.png";
+import OnSuccessCalled from "../assets/images/724Events/OnSuccessCalled.png";
+import LastGiven from "../assets/images/724Events/LastGiven.png";
+import DotNotChanging from "../assets/images/724Events/DotNotChanging.png";
+import InceptionMap from "../assets/images/724Events/InceptionMap.png";
+import NotInceptionMap from "../assets/images/724Events/InceptionMap.png";
 
 export const Projets = [
   {
@@ -181,10 +188,10 @@ export const Projets = [
     Sommaire: "Sommaire",
     Parties: [
       {
-        title: "Liste de tout les bugs révélés",
+        title: "Le slider",
         sections: [
           {
-            subtitle: "Problème 1 - Le slider :",
+            subtitle: "Identification du problème :",
             content: [" Image blanche au défilement.",
                       [WhiteImage],
                       "Le mois affiché n’est pas le bon",
@@ -193,31 +200,7 @@ export const Projets = [
             ]
           },
           {
-            subtitle: "Problème 2 - Sélecteur événements :",
-            content: ["Filtre événements ne fonctionne pas",
-                      [FilterNotWorking],
-                      "Les mois affichés ne sont pas bons",
-            ],
-          },
-          {
-            subtitle: "Problème 3 - Modal du formulaire : ",
-            content: ["Lorsque l’on clique sur le bouton envoyer du formulaire, aucun message de confirmation n’apparait"
-            ],
-          },
-          {
-            subtitle: "Problème 4 - Dernier Event",
-            content: ["Filtre événements ne fonctionne pas",
-                      "Dans le footer, la dernière prestation doit s’afficher à gauche, avec l’image, le titre et le mois",
-                      [NoLastEvent]
-            ],
-          },
-        ]
-      },
-      {
-        title: "Sources des problèmes",
-        sections: [
-          {
-            subtitle: "Problème 1 - Le slider / Source du problème :",
+            subtitle: "Source du problème :",
             content: ["Le problème est qu’à la dernière image, l’index atteint la valeur 2, puis après un délai de 5 secondes, il passe à 3. Or, comme aucune image n’existe à cet index, l’affichage devient vide (blanc) pendant ces 5 secondes avant de boucler ou s’arrêter.",
                       [WrongMath],
                       "Pour les mois : le tableau des mois dans Helpers/date/index.js commençait par 1, 2, 3, …, 12, alors que le système d’indexation de la machine débute à 0. Cette différence d’indexation entraînait donc un décalage entre les mois affichés et leur valeur réelle.",
@@ -225,7 +208,27 @@ export const Projets = [
             ]
           },
           {
-            subtitle: "Problème 2 - Sélecteur événements / Source du problème :",
+            subtitle: "Correction :",
+            content: ["En ajoutant -1 à la longueur totale, on empêche l’index d’atteindre une valeur inexistante. Il ira donc de 0 à 2, mais jamais jusqu’à 3, avant de recommencer à 0.",
+              [GoodMath],
+              "Il a suffi de modifier le tableau index.js dans Helpers/date afin de faire débuter la numérotation des mois à 0 et la terminer à 11 (soit bien 12 mois au total).",
+              [BetterDate]
+            ]
+          }
+        ]
+      },
+      {
+        title: "Sélecteur événements",
+        sections: [
+          {
+            subtitle: "Identification du problème :",
+            content: ["Filtre événements ne fonctionne pas",
+                      [FilterNotWorking],
+                      "Les mois affichés ne sont pas bons",
+            ],
+          },
+          {
+            subtitle: "Source du problème :",
             content: ["Dans le composant Select, le gestionnaire onChange (lié à changeValue) n’accepte aucun argument : il ne transmet donc pas la nouvelle valeur au state type.",
                       [OnChangeNoValue],
                       "Par ailleurs, le code suivante est incorrect :",
@@ -234,57 +237,61 @@ export const Projets = [
             ]
           },
           {
-            subtitle: "Problème 3 - Modal du formulaire / Source du problème :",
-            content: ["Dans containers/Form/index.js, la fonction onSuccess n’est jamais appelée dans le callback.",
-                      [OnSuccessNotCalled]
-            ]
-          },
-          {
-            subtitle: "Problème 4 - Dernier Event / Source problème :",
-            content: ["La constante last, présente dans pages/Home/index.js, provient de context/DataContext/index.js, mais elle ne reçoit aucun élément et ne contient pas la logique permettant de trier les événements pour obtenir le plus récent.",
-                      [LastFromDataContext],
-                      [NoLastGiven],
+            subtitle: "Correction :",
+            content: [
+              "Ajout du paramètre newValue à la fonction onChange pour récupérer la nouvelle valeur sélectionnée.",
+              [OnChangeValueAdded],
+              "Remplacement de la condition qui ne faisait aucun filtrage par une version permettant désormais de filtrer les événements selon leur type.",
+              [BetterCode]
             ]
           }
         ]
       },
       {
-        title: "Corrections des bugs",
+        title: "Message de confirmation du formulaire",
         sections: [
           {
-            subtitle: "Version de base",
-            content: [
-              "Titre générique “Portfolio”, sans balise <meta description>.",
-              [BadTitle],
-              "Aucun attribut alt ou usage basique.",
-              [NoAlt],
-              "Pas de structure claire ou schema.",
-              [NoMetaSchema],
-              [NoStructure]
+            subtitle: "Identification du problème :",
+            content: ["Lorsque l’on clique sur le bouton envoyer du formulaire, aucun message de confirmation n’apparait"
+            ],
+          },
+          {
+            subtitle: "Source du problème :",
+            content: ["Dans containers/Form/index.js, la fonction onSuccess n’est jamais appelée dans le callback.",
+                      [OnSuccessNotCalled]
             ]
           },
           {
-            subtitle: "Version optimisée",
+            subtitle: "Correction :",
             content: [
-              "Titre optimisé : par exemple, “Photographer Nina Carducci – Portraits & Events” qui améliore le référencement.",
-              [BetterTitle],
-              "Balise meta description bien définie.",
-              [BetterMeta],
-              "Hiérarchie sémantique HTML solide (un <h1>, plusieurs <h2>/<h3> pour les sections).",
-              [BetterStructure],
-              "Attributs alt descriptifs présents sur toutes les images, favorables au SEO et à l’accessibilité.",
-              [BetterAlt],
-              "JSON-LD LocalBusiness : structure l’information pour les moteurs de recherche, très utile pour la visibilité locale.",
-              [Schema]
+              "Appeler la fonction onSuccess() dans le callback lorsque aucune erreur n’est détectée.",
+              [OnSuccessCalled]
+            ]
+          }
+        ]
+      },
+      {
+        title: "Dernier Événement",
+        sections: [
+          {
+            subtitle: "Identification du problème :",
+            content: ["Filtre événements ne fonctionne pas",
+                      "Dans le footer, la dernière prestation doit s’afficher à gauche, avec l’image, le titre et le mois",
+                      [NoLastEvent]
+            ],
+          },
+          {
+            subtitle: "Source du problème :",
+            content: ["La constante last, présente dans pages/Home/index.js, provient de context/DataContext/index.js, mais elle ne reçoit aucun élément et ne contient pas la logique permettant de trier les événements pour obtenir le plus récent.",
+                      [LastFromDataContext],
+                      [NoLastGiven],
             ]
           },
           {
-            subtitle: "Résumé des gains SEO",
+            subtitle: "Correction :",
             content: [
-              "Meilleur ciblage (titre + description).",
-              "Structure sémantique optimisée.",
-              "Images accessibles et indexées.",
-              "Balises JSON-LD pour référencement local."
+              "La solution consiste à trier les événements par date décroissante afin d’identifier le plus récent, puis à stocker ce dernier dans une constante last. Enfin, cette constante est transmise via la valeur du contexte (value).",
+              [LastGiven]
             ]
           }
         ]
@@ -293,9 +300,14 @@ export const Projets = [
         title: "Autre bug trouvés et leur correction apportées",
         sections: [
           {
-            subtitle: "Problème 1 - Le Slider",
+            subtitle: "Les dots du Slider",
             content: [
-              "Les dots ne bouge pas (N’as pas été retenu par le directeur mais c’est a améliorer)"
+              "Les dots ne bouge pas et restent figée sur le 3ieme seulement",
+              [DotNotChanging],
+              "Les “dots” (boutons radio de pagination) étaient générés par un .map() imbriqué dans un autre .map(). Cela provoquait la création de plusieurs groupes de pagination — un par slide — et seul le dernier groupe restait affiché à la fin.",
+              [InceptionMap],
+              "La correction consiste à sortir le .map() des “dots” afin qu’il ne soit plus imbriqué dans un autre, évitant ainsi la création multiple de groupes de pagination.",
+              [NotInceptionMap]
             ]
           },
           {
@@ -306,30 +318,9 @@ export const Projets = [
             ]
           },
           {
-            subtitle: "Résumé des gains",
+            subtitle: "blblblbl",
             content: [
-              "Amélioration notable du référencement social et local.",
-              "Rendu sur réseaux sociaux homogène et attrayant."
-            ]
-          }
-        ]
-      },
-      {
-        title: "Accessibilité",
-        sections: [
-          {
-            subtitle: "Version de base",
-            content: [
-              "Structure très basique, sans indication de lang, contrastes non vérifiés, navigation non testée pour clavier."
-            ]
-          },
-          {
-            subtitle: "Version optimisée",
-            content: [
-              "Attribut lang=\"fr\" bien présent sur <html>, essentiel pour les lecteurs d’écran.",
-              "Attributs alt descriptifs sur toutes les images.",
-              "Structure sémantique des titres, bénéfique pour la compréhension par les technologies d’assistance.",
-              "Lazy-loading : bénéfique pour l’UX et la performance mobile."
+              "blblblbl"
             ]
           }
         ]
