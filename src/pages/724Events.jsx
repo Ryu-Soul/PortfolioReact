@@ -1,18 +1,18 @@
 import React from 'react'
 import { Projets } from '../data/Projets'
-import '../styles/Ninapage.scss'
+import '../styles/Eventspage.scss'
 
 export default function ProjetEvents() {
     const projet = Projets[1]
     return (
 
-        <main>
+        <main className='main724Event'>
             <h1>{projet.h1Title}</h1>
-            <article className='Intro'>
+            <article className='Intro724Event'>
                 <h2>{projet.introTitle}</h2>
                 <p>{projet.introP}</p>
             </article>
-            <article className='Sommaire'>
+            <article className='Sommaire724Event'>
                 <h2>{projet.Sommaire}</h2>
                 <ol>
                     {projet.Parties.map((partie, index) => (
@@ -21,12 +21,12 @@ export default function ProjetEvents() {
                 </ol>
             </article>
             {projet.Parties.map((partie, index) => (
-                <article key={index} className={'Partie' + index}>
+                <article key={index} className={'EventPartie' + index}>
                     <h2>{index + 1} – {partie.title}</h2>
 
                     {/* Cas où la partie contient des sections */}
                     {partie.sections && partie.sections.map((section, idx) => (
-                        <section key={idx} className={`section-${idx + 1}`}>
+                        <section key={idx} className={`Eventsection-${idx + 1}`}>
                             {section.subtitle && <h3>{section.subtitle}</h3>}
                             <ul>
                                 {section.content.map((point, i) => (
@@ -57,7 +57,7 @@ export default function ProjetEvents() {
                 </article>
 
             ))}
-            <article className="Annexe">
+            <article className="Annexe724Event">
             </article>
         </main>
     )

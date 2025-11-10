@@ -1,0 +1,135 @@
+#root {
+    width: 100%;
+}
+.main724Event {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: white;
+    h1 {
+        color: #6C4EFF;
+    }
+    article {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        color: black;
+        h2 {
+            color : #6C4EFF;
+        }
+        p {
+            font-size: 22px;
+        }
+        li {
+            font-size: 22px;
+        }
+    }
+    img {
+        width: 100%;
+        height: auto;
+        min-height: 40px;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    li {
+        .section-1 {
+            li {
+                color: black;
+            }
+        }
+        .section-2 {
+            li {
+                color: black;
+            }
+        }
+        .section-3 {
+            li {
+                color: black;
+            }
+        }
+    }
+    .Intro724Event {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 1166px;
+    }
+    .Sommaire724Event {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 1166px;
+    }
+    .EventPartie0 {
+        display: flex;
+        align-items: center;
+        color: white;
+        border-radius: 100% 100% 0% 0% / 5% 5% 0% 0%;
+        background-color: #6C4EFF;
+        h2 {
+            color: white;
+        }
+        h3 {
+            color: white;
+        }
+        width: 100%;
+    }
+    .EventPartie1 {
+        width: 1166px;
+        h2 {
+            color:#6C4EFF;
+        }
+        section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+    .EventPartie2 {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        background-color: #6C4EFF;
+        border-radius: 100% 100% 0% 0% / 5% 5% 0% 0%;
+        color: white;
+        h2 {
+            color: white;
+        }
+        h3 {
+            color: white;
+        }
+        section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+    .EventPartie3 {
+        width: 1166px;
+        section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+    .EventPartie4 {
+        width: 1166px;
+        section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+    .Annexe724Event {
+        width: 1166px;
+        section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+}
