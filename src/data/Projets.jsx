@@ -44,7 +44,7 @@ export const Projets = [
   {
     h1Title: "Projet NinaCarducci",
     introTitle: "Introduction",
-    introP: "Je suis développeur freelance et je propose mes services d’optimisation SEO à de nouveaux clients. Parmi mes prospects, j’ai identifié le site de Nina Carducci, une photographe dont m’a parlé un ami. Suite à nos échanges, Nina Carducci a accepté de collaborer avec moi. Ma mission a consisté à optimiser globalement son site, tant sur les performances que sur le SEO, à mettre en place le référencement local via Schema.org, à ajouter les balises meta pour les réseaux sociaux, à améliorer l’accessibilité et enfin à produire un rapport détaillé présentant mes actions et leurs impacts.",
+    introP: "Je suis développeur freelance et je propose mes services d’optimisation SEO à de nouveaux clients. Parmi mes prospects, j’ai identifié le site de Nina Carducci, une photographe dont m’a parlé un ami. Suite à nos échanges, Nina Carducci a accepté de collaborer avec moi. Ma mission consistait à optimiser globalement son site, tant sur les performances que sur le SEO, à mettre en place le référencement local via Schema.org, à ajouter les balises meta pour les réseaux sociaux, à améliorer l’accessibilité et enfin à produire un rapport détaillé présentant mes actions et leurs impacts.",
     Sommaire: "Sommaire",
     Parties: [
       {
@@ -187,7 +187,7 @@ export const Projets = [
   h1Title: "Projet 724Events",
   introTitle: "Introduction",
   introP:
-    "Je suis développeur front-end freelance, et l’agence évènementielle 724Events m’a contacté pour finaliser la nouvelle version de son site vitrine one-page. Un premier développeur avait déjà commencé l’intégration, mais a dû abandonner le projet pour des raisons personnelles. Le site était fonctionnel, mais plusieurs bugs gênaient la navigation et l’expérience utilisateur. J’ai échangé en visioconférence avec Jean-Baptiste, le directeur marketing de l’agence, afin qu’il me présente le projet plus en détail. Mon rôle a consisté à déboguer, tester et finaliser le site afin de le rendre parfaitement fonctionnel et prêt pour sa mise en ligne.",
+    "Je suis développeur front-end freelance, et l’agence évènementielle 724Events m’a contacté pour finaliser la nouvelle version de son site vitrine one-page. Un premier développeur avait déjà commencé l’intégration, mais a dû abandonner le projet pour des raisons personnelles. Le site était fonctionnel, mais plusieurs bugs gênaient la navigation et l’expérience utilisateur. J’ai échangé en visioconférence avec Jean-Baptiste, le directeur marketing de l’agence, afin qu’il me présente le projet plus en détail. Mon rôle consistait à déboguer, tester et finaliser le site afin de le rendre parfaitement fonctionnel et prêt pour sa mise en ligne.",
   Sommaire: "Sommaire",
   Parties: [
     {

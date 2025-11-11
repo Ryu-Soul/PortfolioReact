@@ -109,6 +109,9 @@ button:focus-visible {
 
 .navbar {
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: 50px;
     width: 100%;
+    height: 50px;
 }
