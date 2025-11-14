@@ -37,8 +37,6 @@ import LastGiven from "../assets/images/724Events/LastGiven.png";
 import DotNotChanging from "../assets/images/724Events/DotNotChanging.png";
 import InceptionMap from "../assets/images/724Events/InceptionMap.png";
 import NotInceptionMap from "../assets/images/724Events/InceptionMap.png";
-import MathFloor from "../assets/images/724Events/MathFloor.png";
-import MathCeil from "../assets/images/724Events/MathCeil.png";
 
 export const Projets = [
   {
@@ -320,16 +318,6 @@ export const Projets = [
             [InceptionMap],
             "La correction consiste à sortir le .map() des “dots” afin qu’il ne soit plus imbriqué dans un autre, évitant ainsi la création multiple de groupes de pagination.",
             [NotInceptionMap],
-          ],
-        },
-        {
-          subtitle: "Problème 2 - Pages des événements",
-          content: [
-            "Le numéro des pages n’affiche pas les bons numéros une fois sur la page 2.",
-            "Le calcul du nombre de pages utilise Math.floor, qui arrondit à l’inférieur.",
-            [MathFloor],
-            "Correction : utiliser Math.ceil pour arrondir au supérieur et afficher le bon nombre de pages.",
-            [MathCeil],
           ],
         },
         {
